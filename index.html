@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programação Web II — Central de Revisão</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-logo">💻</span><div><strong>Programação Web II</strong><small>Central de Revisão · ADS</small></div></div>
+  <nav class="nav">
+    <button class="nav-btn active" data-target="resumo">📚 Resumão</button>
+    <button class="nav-btn" data-target="simulado">📝 Simulado</button>
+    <button class="nav-btn" data-target="prova">🎯 Desafios</button>
+    <button class="nav-btn" data-target="flashcards">⚡ Flashcards</button>
+  </nav>
+</header>
+<section class="hero"><div class="hero-glow"></div><div class="hero-content">
+  <span class="badge">Revisão para a prova</span>
+  <h1>Domine <span class="grad">Programação Web II</span></h1>
+  <p class="hero-sub">Resumo dos 6 módulos, questões de revisão, desafios e flashcards em um só lugar.</p>
+  <div class="hero-actions"><button class="btn btn-primary" data-jump="simulado">Começar simulado →</button><button class="btn btn-ghost" data-jump="resumo">Revisar conteúdo</button></div>
+  <div class="hero-stats"><div class="stat"><strong>6</strong><span>módulos</span></div><div class="stat"><strong>30</strong><span>questões</span></div><div class="stat"><strong>6</strong><span>desafios</span></div><div class="stat"><strong>24</strong><span>flashcards</span></div></div>
+</div></section>
+<main class="container">
+<section id="resumo" class="view active"><div class="section-head"><h2>📚 Resumão por módulo</h2><p>Clique nos módulos para expandir e revisar os pontos principais.</p></div>
+<details class="topic" open><summary><span class="topic-ico">🏗️</span><span class="topic-title">Módulo 1 — Modelos e Banco de Dados</span><span class="topic-tag">5 questões</span></summary><div class="topic-body">
+<p>O material apresenta modelos de desenvolvimento e conceitos básicos de banco de dados.</p>
+<h4>Modelo Incremental</h4><p>É apresentado como adequado para aplicações Web por ser flexível, permitir mudanças entre versões e facilitar testes e gerenciamento de riscos.</p>
+<h4>Banco de dados</h4><p>Local onde informações podem ser armazenadas, consultadas e alteradas.</p>
+<h4>Modelo lógico</h4><p>Faz o mapeamento dos dados da solução escolhida para a aplicação.</p>
+<div class="callout tip"><strong>💡 Para lembrar:</strong> chave primária identifica um registro; chave estrangeira relaciona uma tabela com outra.</div>
+</div></details>
+<details class="topic"><summary><span class="topic-ico">🔗</span><span class="topic-title">Módulo 2 — Casos de Uso, DER e Modelo Lógico</span><span class="topic-tag">5 questões</span></summary><div class="topic-body">
+<h4>Diagrama de Casos de Uso</h4><p>Descreve requisitos funcionais de forma simples para usuários e desenvolvedores.</p>
+<h4>Atores</h4><p>Representam os papéis e funções de cada participante dentro do contexto do sistema.</p>
+<h4>Relacionamentos</h4><p>Podem ocorrer entre ator e caso de uso, entre atores e entre casos de uso.</p>
+<h4>DER</h4><p>Modela os conceitos que devem ser armazenados em um banco de dados.</p>
+<div class="callout note"><strong>📌 Resumo:</strong> Casos de Uso → comportamento/requisitos. DER → dados que serão armazenados.</div>
+</div></details>
+<details class="topic"><summary><span class="topic-ico">🐘</span><span class="topic-title">Módulo 3 — PHP Básico</span><span class="topic-tag">5 questões</span></summary><div class="topic-body">
+<h4>PHP</h4><p>Linguagem de script que roda no servidor e processa os dados antes de retornar o resultado ao cliente.</p>
+<h4>Variáveis</h4><p>São declaradas usando <code>$</code>, como <code>$nome</code>.</p>
+<h4>Tipos e operadores</h4><p>O material destaca a resolução dinâmica de tipos. Operadores de atribuição: <code>=</code>, <code>+=</code>, <code>/=</code> e <code>.=</code>.</p>
+<h4>for</h4><p>Repete determinado código um número conhecido de vezes.</p>
+<h4>Formulários</h4><p>Dados enviados por POST podem ser recebidos com <code>$_POST</code>.</p>
+<div class="callout warn"><strong>⚠️ Atenção:</strong> <code>$_POST</code> precisa receber dados enviados pelo formulário; executar o PHP diretamente sem POST pode gerar aviso de chave inexistente.</div>
+</div></details>
+<details class="topic"><summary><span class="topic-ico">🧩</span><span class="topic-title">Módulo 4 — Funções, POO e Sessões</span><span class="topic-tag">5 questões</span></summary><div class="topic-body">
+<h4>Função</h4><p>Bloco de instruções que realiza um procedimento e pode ser chamado quando necessário.</p>
+<h4>POO</h4><p>O material destaca a redução de redundâncias e repetições como vantagem.</p>
+<h4>Classe</h4><p>Estrutura que define tipos de dados, atributos e métodos de seus objetos.</p>
+<h4>Sessão</h4><p>Recurso utilizado para manter informações salvas entre páginas.</p>
+<div class="codebox"><code>session_start();<br>$_SESSION["nome"] = $_POST["nome"];<br>session_destroy();</code></div>
+</div></details>
+<details class="topic"><summary><span class="topic-ico">🗄️</span><span class="topic-title">Módulo 5 — MySQL, MySQLi e Atualização</span><span class="topic-tag">5 questões</span></summary><div class="topic-body">
+<h4>Extensões</h4><p>O material cita MySQL, MySQLi e PDO.</p>
+<h4>Reutilização de arquivos</h4><p><code>include</code>, <code>include_once</code>, <code>require</code> e <code>require_once</code>.</p>
+<h4>MySQLi</h4><div class="codebox"><code>$conn = new mysqli(servidor, usuario, senha, banco_de_dados);</code></div>
+<h4>Consultas</h4><div class="codebox"><code>$sql = "SELECT * FROM banco";</code></div>
+<h4>Atualização</h4><p>O desafio trabalha com SELECT para buscar os dados atuais e UPDATE para gravar os dados alterados.</p>
+</div></details>
+<details class="topic"><summary><span class="topic-ico">🌐</span><span class="topic-title">Módulo 6 — SOAP e REST</span><span class="topic-tag">5 questões</span></summary><div class="topic-body">
+<h4>SOAP</h4><p>Protocolo robusto para troca de dados entre aplicações, baseado em XML e independente de linguagem e tecnologia.</p>
+<h4>RPC e cabeçalhos</h4><p>O material apresenta chamadas de procedimentos remotos como recurso do SOAP. Reduzir ou eliminar elementos de cabeçalho pode melhorar o desempenho.</p>
+<h4>REST</h4><p>Arquitetura apresentada como alternativa mais leve ao SOAP e sem estado (stateless).</p>
+<table><tr><th>Verbo</th><th>Uso</th></tr><tr><td>GET</td><td>Recuperação</td></tr><tr><td>POST</td><td>Criação</td></tr><tr><td>PUT</td><td>Atualização/substituição</td></tr><tr><td>DELETE</td><td>Exclusão</td></tr></table>
+<div class="callout important"><strong>📌 SOAP × REST:</strong> pense em SOAP como uma comunicação mais estruturada/robusta e REST como uma alternativa mais leve.</div>
+</div></details>
+</section>
+<section id="simulado" class="view"><div class="section-head"><h2>📝 Simulado</h2><p>30 questões de revisão. Escolha uma alternativa e depois corrija.</p></div><div class="quiz-progress"><div class="quiz-progress-bar"><span id="progressBar"></span></div><span id="progressText">0 / 30 respondidas</span></div><div id="quiz"></div><div class="quiz-actions"><button class="btn btn-primary" id="btnCorrigir">Corrigir simulado</button><button class="btn btn-ghost" id="btnRefazer">Refazer</button></div><div id="resultado" class="resultado" hidden></div></section>
+<section id="prova" class="view"><div class="section-head"><h2>🎯 Desafios e Modo Prova</h2><p>Tente responder com suas palavras antes de revelar a resposta.</p></div><div id="provaLista"></div></section>
+<section id="flashcards" class="view"><div class="section-head"><h2>⚡ Flashcards</h2><p>Clique no cartão para virar e conferir a resposta.</p></div><div id="cards" class="cards-grid"></div></section>
+</main>
+<footer class="footer">Programação Web II — Central de Revisão<div class="footer-sub">Material baseado nos conteúdos e gabaritos de revisão da disciplina.</div></footer>
+<script src="script.js"></script>
+</body></html>
